@@ -410,15 +410,15 @@ Customer firstCustomer = futureFirstCustomer.Value;
 					<div class="col-lg-3">
 						<h3>Bulk Operations</h3>
 						<ul>
-							<li><a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" target="_blank">.NET Entity Framework Extensions</a></li>
+							<li><a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" target="_blank">Entity Framework Extensions</a></li>
 							<li><a href="http://www.zzzprojects.com/products/dotnet-development/bulk-operations/" target="_blank">.NET Bulk Operations</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
 						<h3>Expression Evaluator</h3>
 						<ul>
-							<li><a href="http://eval-expression.net/" target="_blank">Eval Expression.NET</a></li>
 							<li><a href="http://eval-sql.net/" target="_blank">Eval SQL.NET</a></li>
+							<li><a href="http://eval-expression.net/" target="_blank">Eval Expression.NET</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
@@ -740,7 +740,7 @@ header .card .card-contents a:hover {
 #product a {
 	color: #999;
 	font-size: 14px;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }
 #product a:hover {
 	color: #fefefe;
