@@ -114,7 +114,7 @@ var stateCount = db.States.Where(x => x.IsActive).DeferredCount().FromCache("cou
 // Expire all cache entry using the "countries" tag
 QueryCacheManager.ExpireTag("countries");
 {% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Deferred-%7C-Entity-Framework-deferring-immediate-LINQ-query-execution" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Cache-%7C-Entity-Framework-Second-Level-Caching" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
 		
 			<!-- feature EF+ Query Deferred !-->
