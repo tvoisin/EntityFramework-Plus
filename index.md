@@ -233,7 +233,42 @@ Customer firstCustomer = futureFirstCustomer.Value;
 							</thead>
 							<tbody>
 								<tr>
-									<th>Query Batch Operations</th>
+									<th>Bulk SaveChanges</th>
+									<td><i class="fa fa-times fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Bulk Insert</th>
+									<td><i class="fa fa-times fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Bulk Update</th>
+									<td><i class="fa fa-times fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Bulk Delete</th>
+									<td><i class="fa fa-times fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Bulk Merge</th>
+									<td><i class="fa fa-times fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Audit</th>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Batch Delete</th>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+									<td><i class="fa fa-check-square-o fa-2x"></i></td>
+								</tr>
+								<tr>
+									<th>Batch Update</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
@@ -263,18 +298,13 @@ Customer firstCustomer = futureFirstCustomer.Value;
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
-									<th>Audit</th>
+									<th>Query IncludeOPtimized</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
-									<th>BulkSaveChanges</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
+									<th>Commercial License</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Bulk Operations</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
