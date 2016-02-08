@@ -298,7 +298,7 @@ Customer firstCustomer = futureFirstCustomer.Value;
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
-									<th>Query IncludeOPtimized</th>
+									<th>Query IncludeOptimized</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
