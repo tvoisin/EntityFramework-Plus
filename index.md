@@ -96,7 +96,40 @@ layout: post
 		
 		<!-- features !-->
 		<div id="feature">
-		
+			<!-- feature EF+ Bulk Operations !-->
+			<a id="ef-bulk-operations" href="#"></a>
+			<div class="container">
+				<h3>Bulk Operations</h3>
+				<p>Bulk Operations only available with <a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/">Entity Framework Extensions</a></p>
+{% highlight csharp %}
+// Upgrade SaveChanges performance with BulkSaveChanges
+var context = new CustomerContext();
+// ... context code ...
+
+// Easy to use
+context.BulkSaveChanges();
+
+// Easy to customize
+context.BulkSaveChanges(operation => operation.BatchSize = 1000);
+{% endhighlight %}
+
+{% highlight csharp %}
+// Perform specific bulk operations on entities
+context.BulkDelete(customers);
+context.BulkInsert(customers);
+context.BulkUpdate(customers);
+context.BulkMerge(customers);
+{% endhighlight %}
+
+{% highlight csharp %}
+// Use flexible features such as specifying the primary key
+context.BulkMerge(customers, operation => {
+   operation.ColumnPrimaryKeyExpression = customer => customer.Code;
+});
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
 			<!-- feature EF+ Query Cache !-->
 			<a id="ef-query-cache" href="#"></a>
 			<div class="container">
