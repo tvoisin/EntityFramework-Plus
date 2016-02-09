@@ -315,7 +315,7 @@ var posts = ctx.Post.IncludeOptimized(x => x.Comments.Where(x => x.IsActive));
 			</div>
 			
 			<!-- feature EF+ Audit !-->
-			<a id="ef-query-includeoptimized" href="#"></a>
+			<a id="ef-audit" href="#"></a>
 			<div class="container">
 				<h3>Audit</h3>
 				<p>Allow to easily track changes, exclude/include entity or property and auto save audit entries in the database.</p>
