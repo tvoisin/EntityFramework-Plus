@@ -60,7 +60,7 @@ layout: post
 					<div class="col-lg-5">
 						<div class="card">
 							<div class="card-block card-contents" style="padding-left: 20px;">
-								Bulk Operations
+								<b>Bulk Operations</b>
 								<ul>
 									<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
 									<li><a href="#ef-bulk-operations">Bulk Insert</a></li>
@@ -68,12 +68,12 @@ layout: post
 									<li><a href="#ef-bulk-operations">Bulk Delete</a></li>
 									<li><a href="#ef-bulk-operations">Bulk Merge</a></li>
 								</ul>
-								Batch Operations
+								<b>Batch Operations</b>
 								<ul>
 									<li><a href="#ef-batch-delete">Batch Delete</a></li>
 									<li><a href="#ef-batch-update">Batch Update</a></li>
 								</ul>
-								Query
+								<b>Query</b>
 								<ul>
 									<li><a href="#ef-query-cache">Query Cache</a></li>
 									<li><a href="#ef-query-deferred">Query Deferred</a></li>
