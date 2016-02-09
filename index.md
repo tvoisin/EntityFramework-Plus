@@ -61,15 +61,15 @@ layout: post
 								<ul>
 									<li>Bulk Operations</li>
 										<ul>
-											<li><a href="#ef-bulk-operations">Bulk SaveChanges</a>/li>
+											<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
 											<li><a href="#ef-bulk-operations">Bulk Insert</a></li>
-											<li><a href="#ef-bulk-operations">Bulk Update</a>/li>
-											<li><a href="#ef-bulk-operations">Bulk Delete</a>/li>
-											<li><a href="#ef-bulk-operations">Bulk Merge</a>/li>
+											<li><a href="#ef-bulk-operations">Bulk Update</a></li>
+											<li><a href="#ef-bulk-operations">Bulk Delete</a></li>
+											<li><a href="#ef-bulk-operations">Bulk Merge</a></li>
 										</ul>
 									<li>Batch Operations</li>
 										<ul>
-											<li><a href="#ef-batch-delete">Batch Delete</a>/li>
+											<li><a href="#ef-batch-delete">Batch Delete</a></li>
 											<li><a href="#ef-batch-update">Batch Update</a></li>
 										</ul>
 									</li>
