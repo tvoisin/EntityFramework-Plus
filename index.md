@@ -55,7 +55,9 @@ layout: post
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-1">
+					</div>
+					<div class="col-lg-5">
 						<div class="card">
 							<div class="card-block card-contents" style="padding-left: 20px;">
 								Bulk Operations
