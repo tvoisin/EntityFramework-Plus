@@ -57,7 +57,7 @@ layout: post
 					</div>
 					<div class="col-lg-6">
 						<div class="card">
-							<div class="card-block card-contents">
+							<div class="card-block card-contents" style="padding-left: 20px;">
 								Bulk Operations
 								<ul>
 									<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
