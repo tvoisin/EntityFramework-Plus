@@ -58,32 +58,29 @@ layout: post
 					<div class="col-lg-6">
 						<div class="card">
 							<div class="card-block card-contents">
+								Bulk Operations
 								<ul>
-									<li>Bulk Operations</li>
-										<ul>
-											<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
-											<li><a href="#ef-bulk-operations">Bulk Insert</a></li>
-											<li><a href="#ef-bulk-operations">Bulk Update</a></li>
-											<li><a href="#ef-bulk-operations">Bulk Delete</a></li>
-											<li><a href="#ef-bulk-operations">Bulk Merge</a></li>
-										</ul>
-									<li>Batch Operations</li>
-										<ul>
-											<li><a href="#ef-batch-delete">Batch Delete</a></li>
-											<li><a href="#ef-batch-update">Batch Update</a></li>
-										</ul>
-									</li>
-									<li>Query
-										<ul>
-											<li><a href="#ef-query-cache">Query Cache</a></li>
-											<li><a href="#ef-query-deferred">Query Deferred</a></li>
-											<li><a href="#ef-query-filter">Query Filter</a></li>
-											<li><a href="#ef-query-future">Query Future</a></li>
-											<li><a href="#ef-query-includefilter">Query IncludeFilter</a></li>
-											<li><a href="#ef-query-includeoptimized">Query IncludeOptimized</a></li>
-										</ul>
-									</li>
-									<li>Audit</li>
+									<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
+									<li><a href="#ef-bulk-operations">Bulk Insert</a></li>
+									<li><a href="#ef-bulk-operations">Bulk Update</a></li>
+									<li><a href="#ef-bulk-operations">Bulk Delete</a></li>
+									<li><a href="#ef-bulk-operations">Bulk Merge</a></li>
+								</ul>
+								Batch Operations
+								<ul>
+									<li><a href="#ef-batch-delete">Batch Delete</a></li>
+									<li><a href="#ef-batch-update">Batch Update</a></li>
+								</ul>
+								Query
+								<ul>
+									<li><a href="#ef-query-cache">Query Cache</a></li>
+									<li><a href="#ef-query-deferred">Query Deferred</a></li>
+									<li><a href="#ef-query-filter">Query Filter</a></li>
+									<li><a href="#ef-query-future">Query Future</a></li>
+									<li><a href="#ef-query-includefilter">Query IncludeFilter</a></li>
+									<li><a href="#ef-query-includeoptimized">Query IncludeOptimized</a></li>
+								</ul>
+								<a href="#ef-audit">Audit</a>
 								</ul>
 							</div>
 						</div>
