@@ -467,7 +467,7 @@ Customer firstCustomer = futureFirstCustomer.Value;
 			<div class="container text-center-md-down">
 				<div class="row">
 					<div class="col-lg-6">
-						Copyright © 2015 <a href="http://www.zzzprojects.com/" target="_blank" class="text-bold">ZZZ Projects Inc.</a>
+						Copyright © <a href="http://www.zzzprojects.com/" target="_blank" class="text-bold">ZZZ Projects Inc.</a> 2014 - 2016
 						<div class="hidden-lg-up"></div>
 						All rights reserved
 					</div>
