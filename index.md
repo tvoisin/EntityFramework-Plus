@@ -130,6 +130,40 @@ context.BulkMerge(customers, operation => {
 				<a class="btn btn-primary btn-lg" href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
 			
+			<!-- feature EF+ Batch Delete !-->
+			<a id="ef-batch-delete" href="#"></a>
+			<div class="container">
+				<h3>Batch Delete</h3>
+				<p class="font-weight-bold">Deletes multiples rows in a single database roundtrip and without loading entities in the context.</p>
+{% highlight csharp %}
+// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+// DELETE all users which has been inactive for 2 years
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Delete();
+
+// DELETE using a BatchSize
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Delete(x => x.BatchSize = 1000);
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Delete-%7C-Entity-Framework-Delete-object-without-retrieving-it" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
+			<!-- feature EF+ Batch Update !-->
+			<a id="ef-batch-update" href="#"></a>
+			<div class="container">
+				<h3>Batch Update</h3>
+				<p class="font-weight-bold">Updates multiples rows using an expression in a single database roundtrip and without loading entities in the context.</p>
+{% highlight csharp %}
+// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+// UPDATE all users which has been inactive for 2 years
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Update(x => new User() { IsSoftDeleted = 1 });
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Update-%7C-Entity-Framework-Update-object-without-retrieving-it" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
 			<!-- feature EF+ Query Cache !-->
 			<a id="ef-query-cache" href="#"></a>
 			<div class="container">
@@ -160,6 +194,8 @@ QueryCacheManager.ExpireTag("countries");
 {% endhighlight %}
 				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Cache-%7C-Entity-Framework-Second-Level-Caching" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
+			
+			
 		
 			<!-- feature EF+ Query Deferred !-->
 			<a id="ef-query-deferred" href="#"></a>
@@ -247,6 +283,80 @@ var futureCustomerCount = db.Customers.Where(x => x.IsActive).DeferredCount().Fu
 Customer firstCustomer = futureFirstCustomer.Value;
 {% endhighlight %}
 				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Future-%7C-Entity-Framework-Combine-and-Execute-Multiple-SQL-Command" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
+			<!-- feature EF+ Query IncludeFilter !-->
+			<a id="ef-query-includefilter" href="#"></a>
+			<div class="container">
+				<h3>Query IncludeFilter</h3>
+				<p>Entity Framework already support eager loading however the major drawback is you cannot control what will be included. There is no way to load only active item or load only the first 10 comments.</p>
+				<p><b>EF+ Query Include</b> make it easy:</p>
+{% highlight csharp %}
+var ctx = new EntityContext();
+
+// Load only active comments
+var posts = ctx.Post.IncludeFilter(x => x.Comments.Where(x => x.IsActive));
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-IncludeFilter-%7C-Entity-Framework-Include-Related-Entities-using-Where-Filter" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
+			<!-- feature EF+ Query IncludeOptimized !-->
+			<a id="ef-query-includeoptimized" href="#"></a>
+			<div class="container">
+				<h3>Query IncludeOptimized</h3>
+				<p>Improve SQL generate by Include and filter child collections at the same times!</p>
+{% highlight csharp %}
+var ctx = new EntityContext();
+
+// Load only active comments using an optimized include
+var posts = ctx.Post.IncludeOptimized(x => x.Comments.Where(x => x.IsActive));
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-IncludeFilter-%7C-Entity-Framework-Include-Related-Entities-using-Where-Filter" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+			</div>
+			
+			<!-- feature EF+ Audit !-->
+			<a id="ef-query-includeoptimized" href="#"></a>
+			<div class="container">
+				<h3>Audit</h3>
+				<p>Allow to easily track changes, exclude/include entity or property and auto save audit entries in the database.</p>
+				<p>
+					<b>Support:</b>
+					<ul>
+						<li>AutoSave Audit</li>
+						<li>Exclude & Include Entity</li>
+						<li>Exclude & Include Property</li>
+						<li>Format Value</li>
+						<li>Ignore Events</li>
+						<li>Property Unchanged</li>
+						<li>Soft Add & Soft Delete</li>
+					</ul>
+				</p>
+{% highlight csharp %}
+// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+var ctx = new EntityContext();
+// ... ctx changes ...
+
+var audit = new Audit();
+audit.CreatedBy = "ZZZ Projects"; // Optional
+ctx.SaveChanges(audit);
+
+// Access to all auditing information
+var entries = audit.Entries;
+foreach(var entry in entries)
+{
+    foreach(var property in entry.Properties)
+    {
+    }
+}
+{% endhighlight %}
+
+				<p class="font-italic">AutoSave audit in your database</p>
+{% highlight csharp %}
+AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
+    (context as EntityContext).AuditEntries.AddRange(audit.Entries);
+{% endhighlight %}
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Audit-%7C-Entity-Framework-Audit-Trail-Context-and-Track-Changes" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
 		</div>
 		
