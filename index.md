@@ -146,7 +146,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
          .Delete(x => x.BatchSize = 1000);
 {% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Delete-%7C-Entity-Framework-Delete-object-without-retrieving-it" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Delete-%7C-Entity-Framework-Batch-Delete-Objects-Without-Loading-Them" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
 			
 			<!-- feature EF+ Batch Update !-->
@@ -161,7 +161,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
          .Update(x => new User() { IsSoftDeleted = 1 });
 {% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Update-%7C-Entity-Framework-Update-object-without-retrieving-it" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Update-%7C-Entity-Framework-Batch-Update-Objects-Without-Loading-Them" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
 			</div>
 			
 			<!-- feature EF+ Query Cache !-->
