@@ -44,7 +44,7 @@ layout: post
 					<div class="col-lg-6">
 						<div class="card">
 							<div class="card-block">
-								<h3 class="card-title">EntityFramework Plus (EF+)</h3>
+								<h3 class="card-title">EntityFramework Plus</h3>
 								<h1>Improve Entity Framework performance and overcome limitations with MUST-HAVE features</h1>
 								<hr class="m-y-md" />
 								<div class="lead">
