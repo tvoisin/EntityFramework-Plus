@@ -7,10 +7,10 @@ layout: post
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="description" content="Entity Framework Plus | BulkSaveChanges | Bulk Insert, Update, Delete and Merge | Query Cache | Query Filter | Query Include | Query Future | Query IncludeFilter | Audit">
+		<meta name="description" content="Improve Entity Framework performance and overcome limitations with MUST-HAVE features">
 		<meta name="keywords" content="BulkSaveChanges | Bulk Insert, Update, Delete and Merge | Query Cache | Query Filter | Query Future | Query IncludeFilter | Audit">
 		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
-		<title>Entity Framework Plus | Bulk Operations & Utilities</title>
+		<title>Entity Framework Utilities | Bulk Operations | Batch Delete | Batch Update | Query Cache | Query Filter | Query Future | Query Include | Audit</title>
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -44,8 +44,8 @@ layout: post
 					<div class="col-lg-6">
 						<div class="card">
 							<div class="card-block">
-								<h1 class="card-title">EntityFramework Plus (EF+)</h1>
-								<h3>Entity Framework Bulk Operations & Utilities</h3>
+								<h3 class="card-title">EntityFramework Plus (EF+)</h3>
+								<h1>Improve Entity Framework performance and overcome limitations with MUST-HAVE features</h1>
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a>
@@ -781,10 +781,10 @@ header .card {
 	border: none;
 	color: #f1f1f1;
 }
-header .card h1 {
+header .card h3 {
 	font-size: 3.0rem;
 }
-header .card h3 {
+header .card h1 {
 	font-size: 1.3rem;
 }
 header .card hr {
