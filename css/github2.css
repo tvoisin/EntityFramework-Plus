@@ -60,10 +60,10 @@
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
-.highlight .language-sql .k { color: #0000ff; font-weight: normal }
-.highlight .language-sql .nb { color: #0000ff; }
-.highlight .language-sql .cm { color: #008000;}
-.highlight .language-sql .o { font-weight: normal;}
+.highlight .language-csharp .k { color: #0000ff; font-weight: normal }
+.highlight .language-csharp .nb { color: #0000ff; }
+.highlight .language-csharp .cm { color: #008000;}
+.highlight .language-csharp .o { font-weight: normal;}
 
 pre {
     counter-reset: line-numbering;
