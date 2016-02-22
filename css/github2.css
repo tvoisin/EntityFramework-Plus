@@ -62,7 +62,8 @@
 
 .highlight .language-csharp .k { color: #0000ff; font-weight: normal }
 .highlight .language-csharp .nb { color: #0000ff; }
-.highlight .language-csharp .c1, .highlight .language-csharp .cm { color: #008000;}
+.highlight .language-csharp .c1, 
+.highlight .language-csharp .cm { color: #008000;}
 .highlight .language-csharp .o { font-weight: normal;}
 
 pre {
