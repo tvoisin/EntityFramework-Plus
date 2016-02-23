@@ -5,25 +5,25 @@ layout: post
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
+		
+		<!-- seo !-->
 		<meta name="description" content="Improve Entity Framework performance and overcome limitations with MUST-HAVE features">
 		<meta name="keywords" content="BulkSaveChanges | Bulk Insert, Update, Delete and Merge | Query Cache | Query Filter | Query Future | Query IncludeFilter | Audit">
-		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
 		<title>Entity Framework Utilities | Bulk Operations | Batch Delete | Batch Update | Query Cache | Query Filter | Query Future | Query Include | Audit</title>
+		
+		<!-- icon/css !-->
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<!-- todo: change me !-->
-		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/github.css">
+		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/github2.css">
+		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/default.css">
 	</head>
 	
 	<body>
   
-		<!-- anchor !-->
-		<a id="download" href="#"></a>
-		<a id="github" href="#"></a>
-		
 		<!-- top-header !-->
 		<div id="top-header">
 			<div class="container">
@@ -31,8 +31,8 @@ layout: post
 					<a href="mailto:info@zzzprojects.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;info@zzzprojects.com</a>
 					<a href="https://www.facebook.com/zzzprojects" target="_blank"><i class="fa fa-facebook"></i></a>
 					<a href="https://twitter.com/zzzprojects" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a href="https://plus.google.com/+Zzzprojects_NetSQL/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
-					<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&id=4765ffa5f8" target="_blank" class="hidden-sm-down"><i class="fa fa-newspaper-o"></i></a>
+					<a href="https://plus.google.com/+Zzzprojects_NetSQL" target="_blank"><i class="fa fa-google-plus"></i></a>
+					<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&id=4765ffa5f8" target="_blank" class="hidden-xs-down"><i class="fa fa-newspaper-o"></i></a>
 				</div>
 			</div>
 		</div>
@@ -45,45 +45,37 @@ layout: post
 						<div class="card">
 							<div class="card-block">
 								<h3 class="card-title">EntityFramework Plus</h3>
+								<hr class="m-y-md" />
 								<h1>Improve Entity Framework performance and overcome limitations with MUST-HAVE features</h1>
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a>
-									<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" class="btn btn-primary btn-lg btn-right" role="button"><span><i class="fa fa-github fa-2x"></i>&nbsp;<span>GitHub</span></span></a>
-									<p class="text-muted">* FREE Version limited to 50 characters</p>						
+									<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" class="btn btn-primary btn-lg btn-right" role="button"><span><i class="fa fa-github fa-2x"></i>&nbsp;<span>GitHub</span></span></a>		
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-1">
-					</div>
-					<div class="col-lg-5">
+					<div class="col-lg-6">
 						<div class="card">
-							<div class="card-block card-contents" style="padding-left: 20px;">
-								<b>Bulk Operations</b>
-								<ul>
-									<li><a href="#ef-bulk-operations">Bulk SaveChanges</a></li>
-									<li><a href="#ef-bulk-operations">Bulk Insert</a></li>
-									<li><a href="#ef-bulk-operations">Bulk Update</a></li>
-									<li><a href="#ef-bulk-operations">Bulk Delete</a></li>
-									<li><a href="#ef-bulk-operations">Bulk Merge</a></li>
-								</ul>
-								<b>Batch Operations</b>
-								<ul>
-									<li><a href="#ef-batch-delete">Batch Delete</a></li>
-									<li><a href="#ef-batch-update">Batch Update</a></li>
-								</ul>
-								<b>Query</b>
-								<ul>
-									<li><a href="#ef-query-cache">Query Cache</a></li>
-									<li><a href="#ef-query-deferred">Query Deferred</a></li>
-									<li><a href="#ef-query-filter">Query Filter</a></li>
-									<li><a href="#ef-query-future">Query Future</a></li>
-									<li><a href="#ef-query-includefilter">Query IncludeFilter</a></li>
-									<li><a href="#ef-query-includeoptimized">Query IncludeOptimized</a></li>
-								</ul>
-								<a href="#ef-audit">Audit</a>
-								</ul>
+							<div class="card-block card-code">
+{% highlight csharp %}
+// Easy to use
+context.BulkSaveChanges();
+
+// Easy to customize
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+
+// Perform Bulk Operations
+context.BulkDelete(customers);
+context.BulkInsert(customers);
+context.BulkUpdate(customers);
+
+// Customize Primary Key
+context.BulkMerge(customers, operation => {
+   operation.ColumnPrimaryKeyExpression = 
+        customer => customer.Code;
+});
+{% endhighlight %}	
 							</div>
 						</div>
 					</div>
@@ -91,290 +83,422 @@ layout: post
 			</div>
 		</header>
 		
-		<!-- anchor !-->
-		<a id="features" href="#"></a>
+<!-- featured !-->
+		<div id="featured">
+			<div class="container">
+			
+				<!-- Improve Performance !-->
+				<h2>Improve SaveChanges Performance</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="featured-tagline">Use <span class="text-bold-red">scalable</span> bulk operations and always get the best <span class="text-bold-red">performance</span> available for your database provider.</p>
+						<ul class="featured-list-sm">
+							<li>SQL Server 2008+</li>
+							<li>SQL Azure</li>
+							<li>SQL Compact</li>
+							<li>MySQL</li>
+							<li>SQLite</li>
+							<li>PostgreSQL <i>(Coming soon)</i></li>
+							<li>Oracle <i>(Coming soon)</i></li>
+						</ul>
+						<p><i>Currently only available with <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a> (Under migration to EF+)</i></p>
+					</div>
+					<div class="col-lg-7">
+						<table class="table table-striped table-hover">
+							<tr class="thead-inverse">
+								<th>Operations</th>
+								<th>1,000 Entities</th>
+								<th>2,000 Entities</th>
+								<th>5,000 Entities</th>
+							</tr>
+							<tr>
+								<th>SaveChanges</th>
+								<td>1,000 ms</td>
+								<td>2,000 ms</td>
+								<td>5,000 ms</td>
+							</tr>
+							<tr>
+								<th>BulkSaveChanges</th>
+								<td>90 ms</td>
+								<td>150 ms</td>
+								<td>350 ms</td>
+							</tr>
+							<tr>
+								<th>BulkInsert</th>
+								<td>6 ms</td>
+								<td>10 ms</td>
+								<td>15 ms</td>
+							</tr>
+							<tr>
+								<th>BulkUpdate</th>
+								<td>50 ms</td>
+								<td>55 ms</td>
+								<td>65 ms</td>
+							</tr>
+							<tr>
+								<th>BulkDelete</th>
+								<td>45 ms</td>
+								<td>50 ms</td>
+								<td>60 ms</td>
+							</tr>
+							<tr>
+								<th>BulkMerge</th>
+								<td>65 ms</td>
+								<td>80 ms</td>
+								<td>110 ms</td>
+							</tr>
+						</table>
+						
+						<p class="text-muted">* Benchmark for SQL Server</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- testimonials !-->
+		<div id="testimonials">
+			<div class="container">
+				<h2>Amazing <span class="text-bold-red">performance</span>, outstanding <span class="text-bold-red">support</span>!</h2>
+				<ul>
+					<li>- "We were very, very pleased with the customer support. There was no question, problem or wish, that was not answered AND solved within days! We think that’s very unique!" Klemens Stelzmüller, <a href="http://www.beka-software.at/" target="_blank">Beka-software</a></li>
+					<li>- "I’d definitely recommend it, as it is a great product with a great performance and reliability." Eric Rey, <a href="http://www.transturcarrental.com/" target="_blank">Transtur</a></li>
+					<li>- "It’s great. It took me 5 minutes to implement it and makes my application 100x more responsive for certain database operations. Fill a big hole in Entity Framework." Dave Weisberg</li>
+				</ul>
+				<p><span class="text-bold-red">Share</span> your experience, we love to hear from you: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a></p>
+			</div>
+		</div>
 		
 		<!-- features !-->
 		<div id="feature">
-			<!-- feature EF+ Bulk Operations !-->
-			<a id="ef-bulk-operations" href="#"></a>
 			<div class="container">
-				<h3>Bulk Operations</h3>
-				<p>Bulk Operations only available with <a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/">Entity Framework Extensions</a></p>
+				<!-- BulkSaveChanges !-->
+				<a id="bulk-savechanges" href="#"></a>
+				<h2>Bulk SaveChanges</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Improving your applications performance couldn’t have been made <span class="text-bold-red">easier</span>!</p>
+						<ul>
+							<li>Easy to use</li>
+							<li>Easy to customize</li>
+							<li>Easy to maintain</li>
+						</ul>
+						<p><i>Currently only available with <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a> (Under migration to EF+)</i></p>
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// Upgrade SaveChanges performance with BulkSaveChanges
-var context = new CustomerContext();
-// ... context code ...
-
 // Easy to use
 context.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(operation => operation.BatchSize = 1000);
 {% endhighlight %}
+					</div>
+				</div>
 
+				<hr class="m-y-md" />
+				
+				<!-- Bulk Operations !-->
+				<a id="bulk-operations" href="#"></a>
+				<h2>Bulk Operations</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Use <span class="text-bold-red">flexible</span> features to overcome Entity Framework limitations</p>
+						<ul>
+							<li>Choose batch size</li>
+							<li>Choose columns</li>
+							<li>Choose primary key</li>
+						</ul>
+						<p><i>Currently only available with <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a> (Under migration to EF+)</i></p>
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// Perform specific bulk operations on entities
-context.BulkDelete(customers);
+// Use all kind of bulk operations
 context.BulkInsert(customers);
 context.BulkUpdate(customers);
-context.BulkMerge(customers);
-{% endhighlight %}
+context.BulkDelete(customers);
 
-{% highlight csharp %}
-// Use flexible features such as specifying the primary key
+// Customize your operation
 context.BulkMerge(customers, operation => {
+   operation.BatchSize = 1000;
    operation.ColumnPrimaryKeyExpression = customer => customer.Code;
 });
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Batch Delete !-->
-			<a id="ef-batch-delete" href="#"></a>
-			<div class="container">
-				<h3>Batch Delete</h3>
-				<p class="font-weight-bold">Deletes multiples rows in a single database roundtrip and without loading entities in the context.</p>
+{% endhighlight %}	
+					</div>
+				</div>
+
+				<hr class="m-y-md" />
+				
+				<!-- Delete without loading entities !-->
+				<a id="delete-without-loading-entities" href="#"></a>
+				<h2>Delete without loading entities</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Delete rows from LINQ Query in a single database round trip without loading entities in the context</p>
+						<ul>
+							<li>Use Async methods to make your application responsive</li>
+							<li>Use batch size to improve performance</li>
+							<li>Use batch delay interval to reduce server load</li>
+							<li>Use Intercept to customize DbCommand</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+var bulk= new BulkOperation<Customer>(connection);
+bulk.DestinationTableName = "Customer";
 
-// DELETE all users which has been inactive for 2 years
-ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Delete();
+// Column Input Expression
+bulk.ColumnInputExpression = c => new { c.Code, c.Name };
 
-// DELETE using a BatchSize
-ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Delete(x => x.BatchSize = 1000);
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Delete-%7C-Entity-Framework-Batch-Delete-Objects-Without-Loading-Them" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Batch Update !-->
-			<a id="ef-batch-update" href="#"></a>
-			<div class="container">
-				<h3>Batch Update</h3>
-				<p class="font-weight-bold">Updates multiples rows using an expression in a single database roundtrip and without loading entities in the context.</p>
+// Column Output Expression
+bulk.ColumnOutputExpression = c => c.CustomerID;
+
+bulk.BulkInsert(customers);
+{% endhighlight %}	
+					</div>
+				</div>
+								
+				<hr class="m-y-md" />
+				
+				<!-- Update without loading entities !-->
+				<a id="update-without-loading-entities" href="#"></a>
+				<h2>Update without loading entities</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Update rows from LINQ Query in a single database round trip without loading entities in the context</p>
+						<ul>
+							<li>Use Async methods to make your application responsive</li>
+							<li>Use Intercept to customize DbCommand</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+var bulk= new BulkOperation<Customer>(connection);
+bulk.DestinationTableName = "Customer";
 
-// UPDATE all users which has been inactive for 2 years
-ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Update(x => new User() { IsSoftDeleted = 1 });
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Batch-Update-%7C-Entity-Framework-Batch-Update-Objects-Without-Loading-Them" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Query Cache !-->
-			<a id="ef-query-cache" href="#"></a>
-			<div class="container">
-				<h3>Query Cache</h3>
-				<p class="font-weight-bold">Query cache is the second level cache for Entity Framework.</p>
-				<p>The result of the query is returned from the cache. If the query is not cached yet, the query is materialized and cached before being returned.</p>
-				<p>You can specify cache policy and cache tag to control CacheItem expiration.</p>
-				<p>Supports:</p>
-				<p class="font-italic">Cache Policy</p>
+// Column Input Expression
+bulk.ColumnInputExpression = c => new { c.Code, c.Name };
+
+// Column Output Expression
+bulk.ColumnOutputExpression = c => c.CustomerID;
+
+bulk.BulkInsert(customers);
+{% endhighlight %}	
+					</div>
+				</div>
+								
+				<hr class="m-y-md" />
+				
+				<!-- Auditing !-->
+				<a id="auditing" href="#"></a>
+				<h2>Auditing</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Improve <span class="text-bold-red">security</span> and know what, when and who did a changes in the context.</p>
+						<ul>
+							<li>AutoSave audit values in the database</li>
+							<li>Keep track of SoftDelete entities</li>
+							<li>Filter events you desire</li>
+							<li>Include entity type you desire</li>
+							<li>Format value in your specific format</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// The query is cached using default QueryCacheManager options
-var countries = ctx.Countries.Where(x => x.IsActive).FromCache();
-
-// (EF5 | EF6) The query is cached for 2 hours
-var states = ctx.States.Where(x => x.IsActive).FromCache(DateTime.Now.AddHours(2));
-
-// (EF7) The query is cached for 2 hours without any activity
-var options = new MemoryCacheEntryOptions() { SlidingExpiration = TimeSpan.FromHours(2)};
-var states = ctx.States.Where(x => x.IsActive).FromCache(options);
-{% endhighlight %}
-				<p class="font-italic">Cache Tags</p>
+var bulk = new BulkOperation(connection);
+bulk.CaseSensitive = CaseSensitiveType.Insensitive;
+bulk.ColumnMappings.Add("cOdE", "Code");
+bulk.BulkMerge(dt);
+{% endhighlight %}	
+					</div>
+				</div>
+								
+				<hr class="m-y-md" />
+				
+				<!-- Second Level Cache !-->
+				<a id="second-level-cache" href="#"></a>
+				<h2>Second Level Cache</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Improve application <span class="text-bold-red">performance</span> and reduce sql server load by using a second level caching.</p>
+						<ul>
+							<li>Use Cache Tag to expire cache</li>
+							<li>Use Cache Policy to control caching</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-var states = db.States.Where(x => x.IsActive).FromCache("countries", "states");
-var stateCount = db.States.Where(x => x.IsActive).DeferredCount().FromCache("countries", "states");
-
-// Expire all cache entry using the "countries" tag
-QueryCacheManager.ExpireTag("countries");
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Cache-%7C-Entity-Framework-Second-Level-Caching" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			
-		
-			<!-- feature EF+ Query Deferred !-->
-			<a id="ef-query-deferred" href="#"></a>
-			<div class="container">
-				<h3>Query Deferred</h3>
-				<p class="font-weight-bold">Defer the execution of a query which is normally executed to allow some features like Query Cache and Query Future.</p>
+var bulk = new BulkOperation(connection);
+bulk.CaseSensitive = CaseSensitiveType.Insensitive;
+bulk.ColumnMappings.Add("cOdE", "Code");
+bulk.BulkMerge(dt);
+{% endhighlight %}	
+					</div>
+				</div>
+								
+				<hr class="m-y-md" />
+				
+				<!-- Filtering !-->
+				<a id="filtering" href="#"></a>
+				<h2>Filtering</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Improve your context <span class="text-bold-red">extensibility</span> and create filters to query only what's really available.</p>
+						<ul>
+							<li>Create Multi-Tenancy application</li>
+							<li>Exclude soft deleted record</li>
+							<li>Filter record by security access</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// Oops! The query is already executed, we cannot use Query Cache or Query Future features
-var count = ctx.Customers.Count();
-
-// Query Cache
-ctx.Customers.DeferredCount().FromCache();
-
-// Query Future
-ctx.Customers.DeferredCount().FutureValue();
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Deferred-%7C-Entity-Framework-deferring-immediate-LINQ-query-execution" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Query Filter !-->
-			<a id="ef-query-filter" href="#"></a>
-			<div class="container">
-				<h3>Query Filter</h3>
-				<p class="font-weight-bold">Filter query with predicate at global, instance or query level.</p>
-				<p>Supports:</p>
-				<p class="font-italic">Global Filter</p>
+var bulk = new BulkOperation(connection);
+bulk.CaseSensitive = CaseSensitiveType.Insensitive;
+bulk.ColumnMappings.Add("cOdE", "Code");
+bulk.BulkMerge(dt);
+{% endhighlight %}	
+					</div>
+				</div>
+								
+				<hr class="m-y-md" />
+				
+				<!-- Future & FutureValue !-->
+				<a id="future--futurevalues" href="#"></a>
+				<h2>Future & FutureValue</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Delay queries execution and batch all queries in a single database round trip.</p>
+						<ul>
+							<li>Query Future</li>
+							<li>Query Future Value</li>
+							<li>Query Future Value Deferred</li>
+							<li>Include entity type you desire</li>
+							<li>Format value in your specific format</li>
+						</ul>
+						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-// CREATE global filter
-QueryFilterManager.Filter<Customer>(x => x.Where(c => c.IsActive));
-
-var ctx = new EntityContext();
-
-// TIP: Add this line in EntitiesContext constructor instead
-QueryFilterManager.InitilizeGlobalFilter(ctx);
-
-// SELECT * FROM Customer WHERE IsActive = true
-var customer = ctx.Customers.ToList();
-{% endhighlight %}
-				<p class="font-italic">Instance Filter</p>
+var bulk = new BulkOperation(connection);
+bulk.CaseSensitive = CaseSensitiveType.Insensitive;
+bulk.ColumnMappings.Add("cOdE", "Code");
+bulk.BulkMerge(dt);
+{% endhighlight %}	
+					</div>
+				</div>
+				
+				<hr class="m-y-md" />
+				
+				<!-- Filter included related entities !-->
+				<a id="filter-included-related-entities" href="#"></a>
+				<h2>Filter included related entities</h2>
+				<div class="row">
+					<div class="col-lg-5">
+						<p class="feature-tagline">Overcome Include method limitations by filtering included related entities.</p>
+						<ul>
+							<li>Filter child entities with IncludeFilter</li>
+							<li>Improve performance with IncludeOptimized </li>
+						</ul>						
+					</div>
+					<div class="col-lg-7">
 {% highlight csharp %}
-var ctx = new EntityContext();
-
-// CREATE filter
-ctx.Filter<Customer>(x => x.Where(c => c.IsActive));
-
-// SELECT * FROM Customer WHERE IsActive = true
-var customer = ctx.Customers.ToList();
-{% endhighlight %}
-				<p class="font-italic">Query Filter</p>
-{% highlight csharp %}
-var ctx = new EntityContext();
-
-// CREATE filter disabled
-ctx.Filter<Customer>(CustomEnum.EnumValue, x => x.Where(c => c.IsActive), false);
-
-// SELECT * FROM Customer WHERE IsActive = true
-var customer = ctx.Customers.Filter(CustomEnum.EnumValue).ToList();
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Filter-%7C-Entity-Framework-Dynamic-Instance-and-Global-Filters" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Query Future !-->
-			<a id="ef-query-future" href="#"></a>
-			<div class="container">
-				<h3>Query Future</h3>
-				<p class="font-weight-bold">Query Future allow to reduce database roundtrip by batching multiple queries in the same sql command.</p>
-				<p>All future query are stored in a pending list. When the first future query require a database roundtrip, all query are resolved in the same sql command instead of making a database roundtrip for every sql command.</p>
-				<p>Supports:</p>
-				<p class="font-italic">Future</p>
-{% highlight csharp %}
-// GET the states & countries list
-var futureCountries = db.Countries.Where(x => x.IsActive).Future();
-var futureStates = db.States.Where(x => x.IsActive).Future();
-
-// TRIGGER all pending queries (futureCountries & futureStates)
-var countries = futureCountries.ToList();
-{% endhighlight %}
-				<p class="font-italic">FutureValue</p>
-{% highlight csharp %}
-// GET the first active customer and the number of avtive customers
-var futureFirstCustomer = db.Customers.Where(x => x.IsActive).DeferredFirstOrDefault().FutureValue();
-var futureCustomerCount = db.Customers.Where(x => x.IsActive).DeferredCount().FutureValue();
-
-// TRIGGER all pending queries (futureFirstCustomer & futureCustomerCount)
-Customer firstCustomer = futureFirstCustomer.Value;
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-Future-%7C-Entity-Framework-Combine-and-Execute-Multiple-SQL-Command" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Query IncludeFilter !-->
-			<a id="ef-query-includefilter" href="#"></a>
-			<div class="container">
-				<h3>Query IncludeFilter</h3>
-				<p>Entity Framework already support eager loading however the major drawback is you cannot control what will be included. There is no way to load only active item or load only the first 10 comments.</p>
-				<p><b>EF+ Query Include</b> make it easy:</p>
-{% highlight csharp %}
-var ctx = new EntityContext();
-
-// Load only active comments
-var posts = ctx.Post.IncludeFilter(x => x.Comments.Where(x => x.IsActive));
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-IncludeFilter-%7C-Entity-Framework-Include-Related-Entities-using-Where-Filter" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Query IncludeOptimized !-->
-			<a id="ef-query-includeoptimized" href="#"></a>
-			<div class="container">
-				<h3>Query IncludeOptimized</h3>
-				<p>Improve SQL generate by Include and filter child collections at the same times!</p>
-{% highlight csharp %}
-var ctx = new EntityContext();
-
-// Load only active comments using an optimized include
-var posts = ctx.Post.IncludeOptimized(x => x.Comments.Where(x => x.IsActive));
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Query-IncludeFilter-%7C-Entity-Framework-Include-Related-Entities-using-Where-Filter" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
-			</div>
-			
-			<!-- feature EF+ Audit !-->
-			<a id="ef-audit" href="#"></a>
-			<div class="container">
-				<h3>Audit</h3>
-				<p>Allow to easily track changes, exclude/include entity or property and auto save audit entries in the database.</p>
-				<p>
-					<b>Support:</b>
-					<ul>
-						<li>AutoSave Audit</li>
-						<li>Exclude & Include Entity</li>
-						<li>Exclude & Include Property</li>
-						<li>Format Value</li>
-						<li>Ignore Events</li>
-						<li>Property Unchanged</li>
-						<li>Soft Add & Soft Delete</li>
-					</ul>
-				</p>
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-
-var ctx = new EntityContext();
-// ... ctx changes ...
-
-var audit = new Audit();
-audit.CreatedBy = "ZZZ Projects"; // Optional
-ctx.SaveChanges(audit);
-
-// Access to all auditing information
-var entries = audit.Entries;
-foreach(var entry in entries)
-{
-    foreach(var property in entry.Properties)
-    {
-    }
-}
-{% endhighlight %}
-
-				<p class="font-italic">AutoSave audit in your database</p>
-{% highlight csharp %}
-AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
-    (context as EntityContext).AuditEntries.AddRange(audit.Entries);
-{% endhighlight %}
-				<a class="btn btn-primary btn-lg" href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/EF-Audit-%7C-Entity-Framework-Audit-Trail-Context-and-Track-Changes" role="button" target="_blank">Learn More&nbsp;<i class="fa fa-hand-o-right"></i></a>
+var bulk = new BulkOperation(connection);
+bulk.CaseSensitive = CaseSensitiveType.Insensitive;
+bulk.ColumnMappings.Add("cOdE", "Code");
+bulk.BulkMerge(dt);
+{% endhighlight %}	
+					</div>
+				</div>
+				
 			</div>
 		</div>
 		
-		<!-- anchor !-->
-		<a id="pro" href="#"></a>
+		<!-- support !-->
+		<a id="supports" href="#"></a>
+		<div id="support">
+			<div class="container">
+				<h2>Test our outstanding Support</h2>
+				<h3>We usually answer within the next business day, hour, or minutes!</h3>
+				<div class="row">
+					<hr class="hidden-sm-up" />
+					<div class="col-sm-6 col-lg-3">
+						<div class="card">
+							<div class="card-block">
+								<h4 class="card-title">Contact Us</h4>
+							</div>
+							<a href="mailto:info@zzzprojects.com"><i class="fa fa-users fa-5x"></i></a>
+							<div class="card-block">
+								<p class="card-text">Email our team for any type of questions. We love to hear from you!</p>
+								<a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
+							</div>
+						</div>
+					</div>
+					<hr class="hidden-sm-up" />
+					<div class="col-sm-6 col-lg-3">
+						<div class="card">
+							<div class="card-block">
+								<h4 class="card-title">Documentation</h4>
+							</div>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank"><i class="fa fa-folder-open fa-5x"></i></a>
+							<div class="card-block">
+								<p class="card-text">Consult our complete documentation to help you getting started.</p>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank">Documentation</a>
+							</div>
+						</div>
+					</div>
+					<hr class="hidden-sm-up" />
+					<div class="col-sm-6 col-lg-3">
+						<div class="card">
+							<div class="card-block">
+								<h4 class="card-title">Forum</h4>
+							</div>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank"><i class="fa fa-weixin fa-5x"></i></a>
+							<div class="card-block">
+								<p class="card-text">Visit the forum to propose new features or to discuss about the library.</p>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank">Forum</a>
+							</div>
+						</div>
+					</div>
+					<hr class="hidden-sm-up" />
+					<div class="col-sm-6 col-lg-3">
+						<div class="card">
+							<div class="card-block">
+								<h4 class="card-title">Open Source</h4>
+							</div>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank"><i class="fa fa-github fa-5x"></i></a>
+							<div class="card-block">
+								<p class="card-text">Access the source of the library you're using to understand better its logic.</p>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<!-- pricing !-->
+		<a id="pro" href="#"></a>
 		<div id="pricing">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
 						<h2>Pricing</h2>
 						<hr class="m-y-md" />
-						<p>Become a <span class="text-bold text-green">PRO</span> now and start saving time and money!</p>
-						<p>Thousands of <span class="text-bold">development hours</span> and thousands of <span class="text-bold">unit tests</span> to make EF+ the best and most robust third party library for Entity Framework.</p>
-						<p>Compatible with license: <a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" target="_blank">.NET Entity Framework Extensions</a></p>
+						<p>EntityFramework Plus (EF+) is the new major version of <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a>. We are currently migrating all features one by one. Both license library are compatible.</p>
+						<p class="pricing-tagline">Join thousands of projects already using entity framework extensions and make <span class="text-bold-red">YOUR</span> customers happy.</p>
+						<ul>
+							<li>Improve applications responsivity</li>
+							<li>Minimize time your customers wait</li>
+							<li>Maximize time your customers work</li>
+						</ul>
+						<p class="pricing-tagline">"Time Is Money" and your customers expect applications to respond as quickly as possible.</p>						
+						<p class="pricing-tagline">"B.U.L.K" four letters that will dramatically changes your applications performance forever.</p>						
 						<hr class="m-y-md" />
-						<p>Every month, a new monthly trial of the PRO Version is available to let you evaluate all its features without limitations.</p>					
+						<p>Every month, a <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank">FREE trial</a> of the PRO version is available to let you evaluate all its features without limitations.</p>						
 					</div>
 					<div class="col-lg-6">
 						<table class="table table-hover table-bordered">
@@ -476,16 +600,23 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 						
 						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" onsubmit="return purchase_validate()">
 							<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="hosted_button_id" value="GY8E58XJPDGLW">
 							<input type="hidden" name="currency_code" value="USD">
 							<fieldset class="form-group">
 								<input type="hidden" name="on0" value="Seats">
-								<select name="os0" class="form-control">
-									<option value="1 seat">EntityFramework Plus $599 (1 seat)</option>
-									<option value="2-4 seats" selected>EntityFramework Plus $799 (2-4 seats)</option>
-									<option value="5-9 seats">EntityFramework Plus $999 (5-9 seats)</option>
-									<option value="10-14 seats">EntityFramework Plus $1199 (10-14 seats)</option>
-									<option value="15-19 seats">EntityFramework Plus $1399 (15-19 seats)</option>
+								<select id="provider_type" name="hosted_button_id" class="form-control" onchange="selectProduct()">
+									<option value="GS977QXB98R2C">SQL Server/ Azure Provider</option>
+									<option value="5WVPWVNDGRHH6">SQL Compact Provider</option>
+									<option value="55WDUT7ENJBKU">SQLite Provider</option>
+									<option value="32JM43GUXW4ZW">MySQL Provider</option>
+									<option value="TSCGQDC4YR2MQ">ALL Providers</option>
+								</select> 
+								<br />
+								<select id="product_option" name="os0" class="form-control">
+									<option id="seat1" value="1 seat">Bulk Operations $599 (1 seat)</option>
+									<option id="seat2_4" value="2-4 seats" selected>Bulk Operations $799 (2-4 seats)</option>
+									<option id="seat5_9" value="5-9 seats">Bulk Operations $999 (5-9 seats)</option>
+									<option id="seat10_14" value="10-14 seats">Bulk Operations $1199 (10-14 seats)</option>
+									<option id="seat15_19" value="15-19 seats">Bulk Operations $1399 (15-19 seats)</option>
 								</select> 
 							</fieldset>
 							<div class="checkbox">
@@ -494,8 +625,9 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 								</label>
 							</div>
 							<button type="submit" class="btn btn-success btn-lg"><span><i class="fa fa-shopping-cart"></i>&nbsp;<span>BUY NOW</span></span></button>
-							<div><br />* Contact us for invoice or payment method alternative.</div>
-						</form>					
+							<br />
+							<div>* Contact us for invoice or payment method alternative.</div>
+						</form>		
 					</div>
 				</div>
 			</div>
@@ -517,68 +649,6 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 				</div>
 			</div>
 		</div>
-		
-		<!-- support !-->
-		<div id="support">
-			<div class="container">
-				<h2>Test our Outstanding Support</h2>
-				<h3>We usually answer within the next business day, hour, or minutes!</h3>
-				<div class="row">
-					<hr class="hidden-sm-up" />
-					<div class="col-sm-6 col-lg-3">
-						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">Documentation</h4>
-							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank"><i class="fa fa-folder-open fa-5x"></i></a>
-							<div class="card-block">
-								<p class="card-text">Consult our complete documentation to help you getting started.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank">Documentation</a>
-							</div>
-						</div>
-					</div>
-					<hr class="hidden-sm-up" />
-					<div class="col-sm-6 col-lg-3">
-						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">Contact Us</h4>
-							</div>
-							<a href="mailto:info@zzzprojects.com"><i class="fa fa-users fa-5x"></i></a>
-							<div class="card-block">
-								<p class="card-text">Email our team for any type of questions. We love to hear from you!</p>
-								<a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
-							</div>
-						</div>
-					</div>
-					<hr class="hidden-sm-up" />
-					<div class="col-sm-6 col-lg-3">
-						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">Forum</h4>
-							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank"><i class="fa fa-weixin fa-5x"></i></a>
-							<div class="card-block">
-								<p class="card-text">Visit the forum to propose new features or to discuss about the library.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank">Forum</a>
-							</div>
-						</div>
-					</div>
-					<hr class="hidden-sm-up" />
-					<div class="col-sm-6 col-lg-3">
-						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">Open Source</h4>
-							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank"><i class="fa fa-github fa-5x"></i></a>
-							<div class="card-block">
-								<p class="card-text">Access the source of the library you're using to understand better its logic.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank">GitHub</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<!-- other product !-->
 		<div id="product">
@@ -587,15 +657,14 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 					<div class="col-lg-3">
 						<h3>Entity Framework</h3>
 						<ul>
-							<li><a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" target="_blank">Entity Framework Extensions</a></li>
-							<li><a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank">Entity Framework Plus (EF+)</a></li>
+							<li><a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a></li>
+							<li><a href="http://entityframework-plus.net/" target="_blank">Entity Framework Plus (EF+)</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
 						<h3>Bulk Operations</h3>
 						<ul>
-							<li><a href="http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/" target="_blank">.NET Entity Framework Extensions</a></li>
-							<li><a href="http://www.zzzprojects.com/products/dotnet-development/bulk-operations/" target="_blank">.NET Bulk Operations</a></li>
+							<li><a href="http://bulk-operations.net/" target="_blank">Bulk Operations</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
@@ -608,7 +677,7 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 					<div class="col-lg-3">
 						<h3>Others</h3>
 						<ul>
-							<li><a href="http://www.zzzprojects.com/products/dotnet-development/extension-methods/" target="_blank">Extension Methods</a></li>
+							<li><a href="https://github.com/zzzprojects/Z.ExtensionMethods" target="_blank">Extension Methods</a></li>
 							<li><a href="https://github.com/zzzprojects/LINQ-Async" target="_blank">LINQ Async</a></li>
 						</ul>
 					</div>
@@ -629,7 +698,7 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 					<div class="col-lg-6 text-right-lg-up social">
 						<a href="https://www.facebook.com/zzzprojects" target="_blank"><i class="fa fa-facebook"></i></a>
 						<a href="https://twitter.com/zzzprojects" target="_blank"><i class="fa fa-twitter"></i></a>
-						<a href="https://plus.google.com/+Zzzprojects_NetSQL/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+						<a href="https://plus.google.com/+Zzzprojects_NetSQL" target="_blank"><i class="fa fa-google-plus"></i></a>
 						<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&id=4765ffa5f8" target="_blank"><i class="fa fa-newspaper-o"></i></a>
 					</div>
 				</div>
@@ -637,7 +706,7 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 		</footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="js/tether.min.js"></script>
+	<script src="http://entityframework-plus.net/js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -645,7 +714,7 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-55584370-6', 'auto');
+	  ga('create', 'UA-55584370-7', 'auto');
 	  ga('send', 'pageview');
 	  
 	  function purchase_validate() {
@@ -656,304 +725,25 @@ AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
 		$("#error_validation").modal('show')
 		return false;
 	  }
+	  
+	  function selectProduct() {
+		if($("#provider_type").val() == "TSCGQDC4YR2MQ") {
+			$("#seat1").html("Entity Framework Extensions $799 (1 seat)");
+			$("#seat2_4").html("Entity Framework Extensions $999 (2-4 seats)");
+			$("#seat5_9").html("Entity Framework Extensions $1199 (5-9 seats)");
+			$("#seat10_14").html("Entity Framework Extensions $1399 (10-14 seats)");
+			$("#seat15_19").html("Entity Framework Extensions $1599 (15-19 seats)");
+		}
+		else {
+			$("#seat1").html("Entity Framework Extensions $599 (1 seat)");
+			$("#seat2_4").html("Entity Framework Extensions $799 (2-4 seats)");
+			$("#seat5_9").html("Entity Framework Extensions $999 (5-9 seats)");
+			$("#seat10_14").html("Entity Framework Extensions $1199 (10-14 seats)");
+			$("#seat15_19").html("Entity Framework Extensions $1399 (15-19 seats)");
+		}
+	  }
+	  
+	  selectProduct();
 	</script>
 	</body>
 </html>
-
-<style>
-/* general */
-* {
-	 font-family: "Bitter",Georgia,"Times New Roman",serif;
-}
-.highlight * {
-	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-.text-bold {
-	font-weight: 700;
-}
-.text-green {
-	color: rgb(68, 157, 68);
-}
-@media (max-width: 61em) {
-	.text-center-md-down {
-		text-align: center;
-	}
-}
-@media (max-width: 33em) {
-	.text-center-xs-down {
-		text-align: center;
-	}
-}
-@media (min-width: 62em) {
-	.text-right-lg-up {
-		text-align: right;
-	}
-}
-
-/* section general */
-#top-header {
-	background-color: #111;
-	border-bottom: 1px solid #000;
-	font-size: 14px;
-	padding: 5px 0px;
-}
-header {
-	background: -moz-linear-gradient(top, #222, #333);
-    background: -webkit-linear-gradient(top, #222, #333);
-    background: -ms-linear-gradient(top, #222, #333);
-    background: -o-linear-gradient(top, #222, #333);
-    background: linear-gradient(top, #222, #333);
-	border-bottom: 1px solid #111;
-	border-top: 1px solid #333;
-	padding: 40px 0px;
-}
-#announcement {
-	background-color: #c00;
-	color: #f1f1f1;
-	font-weight: 700;
-	font-style: italic;
-	padding: 5px; 0px;
-}
-#feature {
-    background: -moz-linear-gradient(top, #ddd, #f2f2f2);
-    background: -webkit-linear-gradient(top, #ddd, #f2f2f2);
-    background: -ms-linear-gradient(top, #ddd, #f2f2f2);
-    background: -o-linear-gradient(top, #ddd, #f2f2f2);
-    background: linear-gradient(top, #ddd, #f2f2f2);
-	border-bottom: 1px solid #ddd;
-    border-top: 1px solid #eee;
-	padding-bottom: 60px;
-}
-#pricing {
-	background-color: #fefefe;
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-#support {
-	background: -moz-linear-gradient(top, #eee, #bbb);
-    background: -webkit-linear-gradient(top, #eee, #bbb);
-    background: -ms-linear-gradient(top, #eee, #bbb);
-    background: -o-linear-gradient(top, #eee, #bbb);
-    background: linear-gradient(top, #eee, #bbb);
-	padding-top: 60px;
-	padding-bottom: 60px;
-	border-bottom: 1px solid #aaa;
-	border-top: 1px solid #ccc;
-}
-#product {
-    background: -moz-linear-gradient(top, #111, #222);
-    background: -webkit-linear-gradient(top, #111, #222);
-    background: -ms-linear-gradient(top, #111, #222);
-    background: -o-linear-gradient(top, #111, #222);
-    background: linear-gradient(top, #111, #222);
-	border-bottom: 1px solid #111;
-	border-top: 1px solid #333;
-	color: #fefefe;
-	padding: 20px 0px;
-}
-footer {
-	background: -moz-linear-gradient(top, #333, #222);
-    background: -webkit-linear-gradient(top, #333, #222);
-    background: -ms-linear-gradient(top, #333, #222);
-    background: -o-linear-gradient(top, #333, #222);
-    background: linear-gradient(top, #333, #222);
-	border-top: 1px solid #444;
-	color: #666;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-/* top-header */
-#top-header a {
-	color: #fefefe;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-decoration: none;
-} 
-#top-header a:hover {
-	opacity: 0.7;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-/* header */
-header .card {
-	background-color: transparent;
-	border: none;
-	color: #f1f1f1;
-}
-header .card h3 {
-	font-size: 3.0rem;
-}
-header .card h1 {
-	font-size: 1.3rem;
-}
-header .card hr {
-	border-color: initial;
-}
-header .card .lead .btn {
-	width: 175px;
-}
-header .card .lead .btn-left {
-	margin-right: 20px;
-}
-header .card .lead .btn span {
-	display: inline-block;
-	height: 40px;
-}
-header .card .lead .btn span span {
-	vertical-align : middle;
-}
-header .card .lead .text-muted {
-	font-size: 14px;
-	padding-top: 10px;
-}
-header .card .card-code {
-	background-color: #f1f1f1;
-	border: 2px solid #444;
-	color: #000;
-	min-height: 350px;
-}
-header .card .card-code {
-	padding: 0px;
-}
-header .card .card-code .highlight,
-header .card .card-code .highlight pre {
-	background-color: transparent;
-	border: none;
-}
-header .card .card-contents {
-	font-size: 18px;
-}
-
-header .card .card-contents a {
-	color: #f1f1f1;
-}
-
-header .card .card-contents a:hover {
-	opacity: 0.7;
-	text-decoration: none;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-@media (max-width: 33em) {
-	header .card h1 {
-		font-size: 2.5rem;
-	}
-	header .card .lead .btn {
-		margin-bottom: 20px;
-	}
-}
-
-/* feature */
-#feature h2 {
-	font-size: 42px;
-	letter-spacing: 4px;
-	padding-top: 60px;
-}
-#feature h3 {
-	border-bottom: 2px solid #000;
-	letter-spacing: 3px;
-	font-size: 36px;
-	margin-bottom: 20px;
-	padding-top: 60px;
-	padding-bottom: 10px;
-}
-#feature .btn {
-	margin-top: 40px;
-}
-@media (min-width: 62em) {
-	#feature .row .col-lg-6:first-child {
-		padding-right: 45px;
-	}
-	#feature .row .col-lg-6:last-child {
-		padding-left: 45px;
-	}
-}
-
-/* pricing */
-#pricing h2 {
-	margin-bottom: -10px;
-}
-#pricing .table thead th {
-	text-align: center;
-}
-#pricing .table td {
-	text-align: center;
-}
-#pricing .fa-times {
-	color: #c9302c;
-}
-#pricing .fa-check-square-o {
-	color: #449D44;
-}
-
-/* support */
-#support {
-	text-align: center;
-}
-#support h2 {
-	padding-bottom: 20px;
-}
-#support h3 {
-	font-size: 20px;
-	padding-bottom: 40px;
-}
-#support .card {
-	border: 0.0625rem solid #ccc;
-}
-#support .card-text {
-	min-height: 75px;
-}
-#support i {
-	color: #0275d8;
-}
-
-/* product */
-#product h3 {
-	letter-spacing: 1px;
-	font-size: 18px;
-	font-weight: 700;
-}
-#product ul {
-	list-style: none;
-	padding-left: 0px;
-}
-#product ul li {
-	padding-top: 5px;
-}
-#product a {
-	color: #999;
-	font-size: 14px;
-	letter-spacing: 0.5px;
-}
-#product a:hover {
-	color: #fefefe;
-	opacity: 0.9;
-	text-decoration: none;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-/* footer */
-@media (max-width: 61em) {
-  footer {
-	padding: 20px 0;
-  }
-}
-footer hr {
-	border-color: #666;
-	margin: 20px;
-}
-footer a {
-	color: #666;
-}
-footer a:hover {
-	color: #666;
-	opacity: 0.7;
-	text-decoration: none;
-    transition: all 0.4s ease-in-out 0s;
-}
-footer .social a {
-	font-size: 24px;
-	padding: 0px 10px;
-}
-</style>
