@@ -244,16 +244,13 @@ context.BulkMerge(customers, operation => {
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk= new BulkOperation<Customer>(connection);
-bulk.DestinationTableName = "Customer";
+// DELETE all users inactive for 2 years
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Delete();
 
-// Column Input Expression
-bulk.ColumnInputExpression = c => new { c.Code, c.Name };
-
-// Column Output Expression
-bulk.ColumnOutputExpression = c => c.CustomerID;
-
-bulk.BulkInsert(customers);
+// DELETE using a BatchSize
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Delete(x => x.BatchSize = 1000);
 {% endhighlight %}	
 					</div>
 				</div>
@@ -274,16 +271,9 @@ bulk.BulkInsert(customers);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk= new BulkOperation<Customer>(connection);
-bulk.DestinationTableName = "Customer";
-
-// Column Input Expression
-bulk.ColumnInputExpression = c => new { c.Code, c.Name };
-
-// Column Output Expression
-bulk.ColumnOutputExpression = c => c.CustomerID;
-
-bulk.BulkInsert(customers);
+// UPDATE all users inactive for 2 years
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Update(x => new User() { IsSoftDeleted = 1 });
 {% endhighlight %}	
 					</div>
 				</div>
@@ -307,10 +297,18 @@ bulk.BulkInsert(customers);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk = new BulkOperation(connection);
-bulk.CaseSensitive = CaseSensitiveType.Insensitive;
-bulk.ColumnMappings.Add("cOdE", "Code");
-bulk.BulkMerge(dt);
+var audit = new Audit();
+audit.CreatedBy = "ZZZ Projects"; // Optional
+ctx.SaveChanges(audit);
+
+// Access to all auditing information
+var entries = audit.Entries;
+foreach(var entry in entries)
+{
+    foreach(var property in entry.Properties)
+    {
+    }
+}
 {% endhighlight %}	
 					</div>
 				</div>
@@ -331,10 +329,11 @@ bulk.BulkMerge(dt);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk = new BulkOperation(connection);
-bulk.CaseSensitive = CaseSensitiveType.Insensitive;
-bulk.ColumnMappings.Add("cOdE", "Code");
-bulk.BulkMerge(dt);
+// The first call perform a database round trip
+var countries1 = ctx.Countries.FromCache().ToList();
+
+// Subsequent calls will take the value from the memory instead
+var countries2 = ctx.Countries.FromCache().ToList();
 {% endhighlight %}	
 					</div>
 				</div>
@@ -356,10 +355,12 @@ bulk.BulkMerge(dt);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk = new BulkOperation(connection);
-bulk.CaseSensitive = CaseSensitiveType.Insensitive;
-bulk.ColumnMappings.Add("cOdE", "Code");
-bulk.BulkMerge(dt);
+QueryFilterManager.Filter<Post>(q => q.Where(x => !x.IsSoftDeleted));
+
+var ctx = new EntitiesContext();
+
+// SELECT * FROM Post WHERE IsSoftDeleted = false
+var list = ctx.Posts.ToList();
 {% endhighlight %}	
 					</div>
 				</div>
@@ -383,10 +384,17 @@ bulk.BulkMerge(dt);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk = new BulkOperation(connection);
-bulk.CaseSensitive = CaseSensitiveType.Insensitive;
-bulk.ColumnMappings.Add("cOdE", "Code");
-bulk.BulkMerge(dt);
+// CREATE a pending list of future queries
+var futureCountries = db.Countries.Where(x => x.IsActive).Future();
+var futureStates = db.States.Where(x => x.IsActive).Future();
+
+// TRIGGER all pending queries in one database round trip
+// SELECT * FROM Country WHERE IsActive = true;
+// SELECT * FROM State WHERE IsActive = true
+var countries = futureCountries.ToList();
+
+// futureStates is already resolved and contains the result
+var states = futureStates.ToList();
 {% endhighlight %}	
 					</div>
 				</div>
@@ -406,10 +414,11 @@ bulk.BulkMerge(dt);
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-var bulk = new BulkOperation(connection);
-bulk.CaseSensitive = CaseSensitiveType.Insensitive;
-bulk.ColumnMappings.Add("cOdE", "Code");
-bulk.BulkMerge(dt);
+// LOAD orders and the first 10 active related entities.
+var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
+                                               .OrderBy(y => y.Date)
+                                               .Take(10))
+                     .ToList();
 {% endhighlight %}	
 					</div>
 				</div>
@@ -714,7 +723,7 @@ bulk.BulkMerge(dt);
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-55584370-7', 'auto');
+	  ga('create', 'UA-55584370-6', 'auto');
 	  ga('send', 'pageview');
 	  
 	  function purchase_validate() {
