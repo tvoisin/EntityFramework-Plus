@@ -368,7 +368,7 @@ var list = ctx.Posts.ToList();
 				<hr class="m-y-md" />
 				
 				<!-- Future & FutureValue !-->
-				<a id="future--futurevalues" href="#"></a>
+				<a id="future--futurevalue" href="#"></a>
 				<h2>Future & FutureValue</h2>
 				<div class="row">
 					<div class="col-lg-5">
