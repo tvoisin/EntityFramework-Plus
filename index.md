@@ -50,7 +50,7 @@ layout: post
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a>
-									<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" class="btn btn-primary btn-lg btn-right" role="button"><span><i class="fa fa-github fa-2x"></i>&nbsp;<span>GitHub</span></span></a>		
+									<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" class="btn btn-primary btn-lg btn-right" role="button" onclick="ga('send', 'event', { eventAction: 'github'});"><span><i class="fa fa-github fa-2x"></i>&nbsp;<span>GitHub</span></span></a>		
 								</div>
 							</div>
 						</div>
@@ -452,10 +452,10 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
 							<div class="card-block">
 								<h4 class="card-title">Documentation</h4>
 							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank"><i class="fa fa-folder-open fa-5x"></i></a>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});"><i class="fa fa-folder-open fa-5x"></i></a>
 							<div class="card-block">
 								<p class="card-text">Consult our complete documentation to help you getting started.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank">Documentation</a>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});">Documentation</a>
 							</div>
 						</div>
 					</div>
@@ -465,10 +465,10 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
 							<div class="card-block">
 								<h4 class="card-title">Forum</h4>
 							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank"><i class="fa fa-weixin fa-5x"></i></a>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank" onclick="ga('send', 'event', { eventAction: 'forum'});"><i class="fa fa-weixin fa-5x"></i></a>
 							<div class="card-block">
 								<p class="card-text">Visit the forum to propose new features or to discuss about the library.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank">Forum</a>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank" onclick="ga('send', 'event', { eventAction: 'forum'});">Forum</a>
 							</div>
 						</div>
 					</div>
@@ -478,10 +478,10 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
 							<div class="card-block">
 								<h4 class="card-title">Open Source</h4>
 							</div>
-							<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank"><i class="fa fa-github fa-5x"></i></a>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});"><i class="fa fa-github fa-5x"></i></a>
 							<div class="card-block">
 								<p class="card-text">Access the source of the library you're using to understand better its logic.</p>
-								<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank">GitHub</a>
+								<a href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});">GitHub</a>
 							</div>
 						</div>
 					</div>
