@@ -33,28 +33,24 @@
 	padding: 5px 0px;
 }
 header {
-	background: -moz-linear-gradient(top, #222, #333);
-    background: -webkit-linear-gradient(top, #222, #333);
-    background: -ms-linear-gradient(top, #222, #333);
-    background: -o-linear-gradient(top, #222, #333);
-    background: linear-gradient(top, #222, #333);
-	border-bottom: 1px solid #111;
-	border-top: 1px solid #333;
+	background: -moz-linear-gradient(to top, #000, #333);
+    background: -webkit-linear-gradient(to top, #000, #333);
+    background: -ms-linear-gradient(to top, #000, #333);
+    background: -o-linear-gradient(to top, #000, #333);
+    background: linear-gradient(to top, #000, #333);
+	border-top: 1px solid #5d5d5d;
 	padding: 40px 0px;
 }
 #featured {
-	border-bottom: 1px solid #ddd;
-    border-top: 1px solid #eee;
 	padding-bottom: 60px;
 }
 #testimonials {
-    background: -moz-linear-gradient(top, #ddd, #f2f2f2);
-    background: -webkit-linear-gradient(top, #ddd, #f2f2f2);
-    background: -ms-linear-gradient(top, #ddd, #f2f2f2);
-    background: -o-linear-gradient(top, #ddd, #f2f2f2);
-    background: linear-gradient(top, #ddd, #f2f2f2);
-	border-bottom: 1px solid #ddd;
-    border-top: 1px solid #eee;
+    background: -moz-linear-gradient(to top, #ddd, #f2f2f2);
+    background: -webkit-linear-gradient(to top, #ddd, #f2f2f2);
+    background: -ms-linear-gradient(to top, #ddd, #f2f2f2);
+    background: -o-linear-gradient(to top, #ddd, #f2f2f2);
+    background: linear-gradient(to top, #ddd, #f2f2f2);
+	border-top: 1px solid #ccc;
 	padding-bottom: 60px;
 }
 #feature {
@@ -68,11 +64,11 @@ header {
 	padding-bottom: 60px;
 }
 #support {
-	background: -moz-linear-gradient(top, #222, #333);
-    background: -webkit-linear-gradient(top, #222, #333);
-    background: -ms-linear-gradient(top, #222, #333);
-    background: -o-linear-gradient(top, #222, #333);
-    background: linear-gradient(top, #222, #333);
+	background: -moz-linear-gradient(to top, #000, #333);
+    background: -webkit-linear-gradient(to top, #000, #333);
+    background: -ms-linear-gradient(to top, #000, #333);
+    background: -o-linear-gradient(to top, #000, #333);
+    background: linear-gradient(to top, #000, #333);
 	border-bottom: 1px solid #ddd;
     border-top: 1px solid #eee;
 	color: #fff;
@@ -81,13 +77,12 @@ header {
 	padding-bottom: 60px;
 }
 #product {
-    background: -moz-linear-gradient(top, #111, #222);
-    background: -webkit-linear-gradient(top, #111, #222);
-    background: -ms-linear-gradient(top, #111, #222);
-    background: -o-linear-gradient(top, #111, #222);
-    background: linear-gradient(top, #111, #222);
-	border-bottom: 1px solid #111;
-	border-top: 1px solid #333;
+	background: -moz-linear-gradient(to top, #000, #333);
+    background: -webkit-linear-gradient(to top, #000, #333);
+    background: -ms-linear-gradient(to top, #000, #333);
+    background: -o-linear-gradient(to top, #000, #333);
+    background: linear-gradient(to top, #000, #333);
+	border-bottom: 1px solid #5d5d5d;
 	color: #fefefe;
 	padding: 20px 0px;
 }
@@ -97,7 +92,6 @@ footer {
     background: -ms-linear-gradient(top, #333, #222);
     background: -o-linear-gradient(top, #333, #222);
     background: linear-gradient(top, #333, #222);
-	border-top: 1px solid #444;
 	color: #666;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -122,6 +116,7 @@ header .card {
 }
 header .card h1 {
 	font-size: 2.3rem;
+	font-weight: 900;
 }
 header .card h3 {
 	font-size: 1.3rem;
@@ -162,6 +157,10 @@ header .card .card-code {
 
 /* featured */
 #featured h2 {
+	color: #000;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 	padding-top: 60px;
 	padding-bottom: 30px;
 }
@@ -171,6 +170,13 @@ header .card .card-code {
 #featured .featured-list-sm ul li {
 	font-size: 16px;
 	padding: 5px 0;
+}
+#featured .thead-inverse th {
+	background: -moz-linear-gradient(to top, #000, #333);
+    background: -webkit-linear-gradient(to top, #000, #333);
+    background: -ms-linear-gradient(to top, #000, #333);
+    background: -o-linear-gradient(to top, #000, #333);
+    background: linear-gradient(to top, #000, #333);
 }
 
 /* testimonials */
@@ -189,7 +195,10 @@ header .card .card-code {
 
 /* feature */
 #feature h2 {
-	font-size: 48px;
+	color: #000;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 	padding-top: 60px;
 	padding-bottom: 30px;
 }
@@ -208,8 +217,13 @@ header .card .card-code {
 	margin-top: 40px;
 }
 
+
+
 /* support */
 #support h2 {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 	padding-bottom: 20px;
 }
 #support h3 {
@@ -228,6 +242,11 @@ header .card .card-code {
 }
 
 /* pricing */
+#pricing h2 {
+	color: #000;
+	font-size: 32px;
+	font-weight: 700;
+}
 #pricing .pricing-tagline {
 	font-style: italic;
 }
@@ -242,6 +261,13 @@ header .card .card-code {
 }
 #pricing .fa-check-square-o {
 	color: #449D44;
+}
+#pricing .thead-inverse th {
+	background: -moz-linear-gradient(to top, #000, #333);
+    background: -webkit-linear-gradient(to top, #000, #333);
+    background: -ms-linear-gradient(to top, #000, #333);
+    background: -o-linear-gradient(to top, #000, #333);
+    background: linear-gradient(to top, #000, #333);
 }
 
 /* product */
