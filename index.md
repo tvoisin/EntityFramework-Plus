@@ -98,7 +98,7 @@ context.BulkMerge(customers, operation => {
 							<li>SQL Compact</li>
 							<li>MySQL</li>
 							<li>SQLite</li>
-							<li>PostgreSQL <i>(Coming soon)</i></li>
+							<li>PostgreSQL</li>
 							<li>Oracle <i>(Coming soon)</i></li>
 						</ul>
 						<p><i>Currently only available with <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a> (Under migration to EF+)</i></p>
