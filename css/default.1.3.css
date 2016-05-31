@@ -9,6 +9,9 @@
 	color: #c00;
 	font-weight: 700;
 }
+.ul-link li {
+		padding: 10px 0;
+}
 @media (max-width: 61em) {
 	.text-center-md-down {
 		text-align: center;
