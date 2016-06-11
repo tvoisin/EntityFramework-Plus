@@ -10,9 +10,9 @@ layout: post
 		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
 		
 		<!-- seo !-->
-		<meta name="description" content="Improve Entity Framework performance and overcome limitations with MUST-HAVE features">
-		<meta name="keywords" content="BulkSaveChanges | Bulk Insert, Update, Delete and Merge | Query Cache | Query Filter | Query Future | Query IncludeFilter | Audit">
-		<title>Entity Framework Utilities | Bulk Operations | Batch Delete | Batch Update | Query Cache | Query Filter | Query Future | Query Include | Audit</title>
+		<meta name="description" content="Extend and Overcome Entity Framework Limitations with Must-Have Features">
+		<meta name="keywords" content="BulkSaveChanges, BulkInsert, BulkUpdate, BulkDelete, BulkMerge, Query Cache, Query Filter, Query Future, Query IncludeFilter, Audit">
+		<title>EF Must-Have Features | Bulk Operations | Batch Delete | Batch Update | Query Cache | Query Filter | Query Future | Query Include | Audit</title>
 		
 		<!-- icon/css !-->
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
@@ -101,8 +101,8 @@ layout: post
 						<!-- navbar-bar-header !-->
 						<ul class="nav navbar-nav navbar-nav-header">
 							<li class="nav-item">
-								<h1>Entity Framework Plus</h3>
-								<small>MUST-HAVE Features for EF</small>
+								<h1>Entity Framework Plus
+								<small>EF Must-Have Features</small>
 								</h1>
 							</li>
 						</ul>
@@ -189,7 +189,7 @@ layout: post
 						<div class="card">
 							<div class="card-block">
 								<hr class="m-y-md" />
-								<h2>Improve Entity Framework performance and overcome limitations with MUST-HAVE features</h2>
+								<h2>Extend and Overcome Entity Framework Limitations with Must-Have Features</h2>
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a><br />	
