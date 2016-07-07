@@ -193,8 +193,9 @@ layout: post
 								<h2>Extend and Overcome Entity Framework Limitations with Must-Have Features</h2>
 								<hr class="m-y-md" />
 								<div class="lead">
+									<p>100% Free and Open Source</p>
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a><br />	
-									<div class="text-muted">* Support EF Core, EF6, and EF5</div>
+									<div class="text-muted">Support EF Core, EF6, and EF5</div>
 								</div>
 							</div>
 						</div>
