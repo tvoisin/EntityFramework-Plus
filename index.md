@@ -420,9 +420,10 @@ var states = futureStates.ToList();
 					<div class="col-lg-7">
 {% highlight csharp %}
 // LOAD orders and the first 10 active related entities.
-var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
-                                               .OrderBy(y => y.Date)
-                                               .Take(10))
+var list = ctx.Orders.IncludeFilter(x => x.Items
+                                          .Where(y => !y.IsSoftDeleted)
+                                          .OrderBy(y => y.Date)
+                                          .Take(10))
                      .ToList();
 {% endhighlight %}	
 					</div>
