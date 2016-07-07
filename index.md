@@ -116,8 +116,9 @@ layout: post
 								<a class="nav-link" href="https://github.com/zzzprojects/EntityFramework-Plus/issues" target="_blank">Forum</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#pro">PRO Version</a>
-							</li>
+								<a class="nav-link" href="https://github.com/zzzprojects/EntityFramework-Plus" target="_blank">Source Code</a>
+							</li>						
+							
 							<li class="nav-item">
 								<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download"></i>&nbsp;<span>Download</span></span></a>
 							</li>
@@ -193,34 +194,26 @@ layout: post
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a><br />	
-									<div class="text-muted">* PRO Version unlocked for the current month</div>
+									<div class="text-muted">* Support EF Core, EF6, and EF5</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-4 col-lg-push-2">
 						<div class="card">
-							<br />
-							<div class="card-block card-code">
-{% highlight csharp %}
-// Easy to use
-context.BulkSaveChanges();
-
-// Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-
-// Perform Bulk Operations
-context.BulkDelete(customers);
-context.BulkInsert(customers);
-context.BulkUpdate(customers);
-
-// Customize Primary Key
-context.BulkMerge(customers, operation => {
-   operation.ColumnPrimaryKeyExpression = 
-        customer => customer.Code;
-});
-{% endhighlight %}
-							</div>
+							<h2>Main Features</h2>
+							<ul style="font-size: 18px;">
+								<li>Auditing</li>
+								<li>Batch Delete</li>
+								<li>Batch Update</li>
+								<li>LINQ Dynamic</li>
+								<li>Query Cache</li>
+								<li>Query Deferred</li>
+								<li>Query Filter</li>
+								<li>Query Future</li>
+								<li>Query IncludeFilter</li>
+								<li>Query IncludeOptimized</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -231,85 +224,7 @@ context.BulkMerge(customers, operation => {
 		<div id="featured">
 			<div class="container">
 			
-				<!-- Improve Performance !-->
-				<h2>Improve SaveChanges Performance</h2>
-				<div class="row">
-					<div class="col-lg-5">
-						<p class="featured-tagline">Use <span class="text-bold-red">scalable</span> bulk operations and always get the best <span class="text-bold-red">performance</span> available for your database provider.</p>
-						<ul class="featured-list-sm">
-							<li>SQL Server 2008+</li>
-							<li>SQL Azure</li>
-							<li>SQL Compact</li>
-							<li>MySQL</li>
-							<li>SQLite</li>
-							<li>PostgreSQL</li>
-							<li>Oracle <i>(Coming soon)</i></li>
-						</ul>	
-					</div>
-					<div class="col-lg-7">
-						<table class="table table-striped table-hover table-responsive">
-							<tr class="thead-inverse">
-								<th>Operations</th>
-								<th>1,000 Entities</th>
-								<th>2,000 Entities</th>
-								<th>5,000 Entities</th>
-							</tr>
-							<tr>
-								<th>SaveChanges</th>
-								<td>1,000 ms</td>
-								<td>2,000 ms</td>
-								<td>5,000 ms</td>
-							</tr>
-							<tr>
-								<th>BulkSaveChanges</th>
-								<td>90 ms</td>
-								<td>150 ms</td>
-								<td>350 ms</td>
-							</tr>
-							<tr>
-								<th>BulkInsert</th>
-								<td>6 ms</td>
-								<td>10 ms</td>
-								<td>15 ms</td>
-							</tr>
-							<tr>
-								<th>BulkUpdate</th>
-								<td>50 ms</td>
-								<td>55 ms</td>
-								<td>65 ms</td>
-							</tr>
-							<tr>
-								<th>BulkDelete</th>
-								<td>45 ms</td>
-								<td>50 ms</td>
-								<td>60 ms</td>
-							</tr>
-							<tr>
-								<th>BulkMerge</th>
-								<td>65 ms</td>
-								<td>80 ms</td>
-								<td>110 ms</td>
-							</tr>
-						</table>
-
-						<p class="text-muted">* Benchmark for SQL Server</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- testimonials !-->
-		<div id="testimonials">
-			<div class="container">
-				<h2>Amazing <span class="text-bold-red">performance</span>, outstanding <span class="text-bold-red">support</span>!</h2>
-				<ul>
-					<li>- "We were very, very pleased with the customer support. There was no question, problem or wish that was not answered AND solved within days! We think that’s very unique!" Klemens Stelzmüller, <a href="http://www.beka-software.at/" target="_blank">Beka-software</a></li>
-					<li>- "I’d definitely recommend it as it is a great product with a great performance and reliability." Eric Rey, <a href="http://www.transturcarrental.com/" target="_blank">Transtur</a></li>
-					<li>- "It’s great. It took me 5 minutes to implement it and makes my application 100x more responsive for certain database operations." Dave Weisberg</li>
-				</ul>
-				<p><a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-primary btn-lg" role="button"><span><i class="fa fa-comments"></i>&nbsp;<span>Read More Success Story</span></span></a></p>
-				<br /><br />
-				<p><span class="text-bold-red">Share</span> your experience. We love to hear from you: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a></p>
+				
 			</div>
 		</div>
 		
@@ -317,60 +232,39 @@ context.BulkMerge(customers, operation => {
 		<div id="feature">
 			<div class="container">
 				
-				<!-- BulkSaveChanges !-->
-				<a id="bulk-savechanges" href="#"></a>
-				<h2>Bulk SaveChanges</h2>
+				<!-- Auditing !-->
+				<a id="auditing" href="#"></a>
+				<h2>Auditing</h2>
 				<div class="row">
 					<div class="col-lg-5">
-						<p class="feature-tagline">Improving your applications performance couldn’t have been made <span class="text-bold-red">easier</span>!</p>
+						<p class="feature-tagline">Improve <span class="text-bold-red">security</span> and know what, when and who did a changes in the context.</p>
 						<ul>
-							<li>Easy to use</li>
-							<li>Easy to customize</li>
-							<li>Easy to maintain</li>
-						</ul>
-					</div>
-					<div class="col-lg-7">
-{% highlight csharp %}
-// Easy to use
-context.BulkSaveChanges();
-
-// Easy to customize
-context.BulkSaveChanges(operation => operation.BatchSize = 1000);
-{% endhighlight %}
-					</div>
-				</div>
-
-				<hr class="m-y-md" />
-				
-				<!-- Bulk Operations !-->
-				<a id="bulk-operations" href="#"></a>
-				<h2>Bulk Operations</h2>
-				<div class="row">
-					<div class="col-lg-5">
-						<p class="feature-tagline">Use <span class="text-bold-red">flexible</span> features to overcome Entity Framework limitations</p>
-						<ul>
-							<li>Choose batch size</li>
-							<li>Choose columns</li>
-							<li>Choose primary key</li>
+							<li>AutoSave audit values in the database</li>
+							<li>Keep track of SoftDelete entities</li>
+							<li>Filter events you desire</li>
+							<li>Include entity type you desire</li>
+							<li>Format value in your specific format</li>
 						</ul>
 						
 					</div>
 					<div class="col-lg-7">
 {% highlight csharp %}
-// Use all kind of bulk operations
-context.BulkInsert(customers);
-context.BulkUpdate(customers);
-context.BulkDelete(customers);
+var audit = new Audit();
+audit.CreatedBy = "ZZZ Projects"; // Optional
+ctx.SaveChanges(audit);
 
-// Customize your operation
-context.BulkMerge(customers, operation => {
-   operation.BatchSize = 1000;
-   operation.ColumnPrimaryKeyExpression = customer => customer.Code;
-});
+// Access to all auditing information
+var entries = audit.Entries;
+foreach(var entry in entries)
+{
+    foreach(var property in entry.Properties)
+    {
+    }
+}
 {% endhighlight %}	
 					</div>
 				</div>
-				
+								
 				<hr class="m-y-md" />
 				
 				<!-- Delete without loading entities !-->
@@ -424,42 +318,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 				</div>
 								
 				<hr class="m-y-md" />
-				
-				<!-- Auditing !-->
-				<a id="auditing" href="#"></a>
-				<h2>Auditing</h2>
-				<div class="row">
-					<div class="col-lg-5">
-						<p class="feature-tagline">Improve <span class="text-bold-red">security</span> and know what, when and who did a changes in the context.</p>
-						<ul>
-							<li>AutoSave audit values in the database</li>
-							<li>Keep track of SoftDelete entities</li>
-							<li>Filter events you desire</li>
-							<li>Include entity type you desire</li>
-							<li>Format value in your specific format</li>
-						</ul>
-						
-					</div>
-					<div class="col-lg-7">
-{% highlight csharp %}
-var audit = new Audit();
-audit.CreatedBy = "ZZZ Projects"; // Optional
-ctx.SaveChanges(audit);
 
-// Access to all auditing information
-var entries = audit.Entries;
-foreach(var entry in entries)
-{
-    foreach(var property in entry.Properties)
-    {
-    }
-}
-{% endhighlight %}	
-					</div>
-				</div>
-								
-				<hr class="m-y-md" />
-				
 				<!-- Second Level Cache !-->
 				<a id="second-level-cache" href="#"></a>
 				<h2>Second Level Cache</h2>
@@ -643,148 +502,84 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<h2>Pricing</h2>
+						<h2>Pricing? 100% Free and Open Source</h2>
 						<hr class="m-y-md" />
-						<p>EntityFramework Plus (EF+) is the new major version of <a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a>. We are currently migrating all features one by one. Both license library are compatible.</p>
-						<p class="pricing-tagline">Join thousands of projects already using bulk operations and make <span class="text-bold-red">YOUR</span> customers happy.</p>
+						<p>Entity Framework Plus is 100% free and open source.</p>
+						<div>
+							<a href="https://github.com/zzzprojects/EntityFramework-Plus/wiki/Downloads" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a><br />	
+							<div class="text-muted">* Support EF Core, EF6, and EF5</div>
+						</div>
+						<hr class="m-y-md" />
+						<p>Looking for a high-performance enhancement library?</p>
 						<ul>
-							<li>Improve applications responsivity</li>
-							<li>Minimize time your customers wait</li>
-							<li>Maximize time your customers work</li>
+							<li><a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a>
+								<ul>
+									<li>BulkSaveChanges</li>
+									<li>BulkInsert</li>
+									<li>BulkUpdate</li>
+									<li>BulkDelete</li>
+									<li>BulkMerge</li>									
+								</ul>
+							</li>
+							<li><a href="http://bulk-operations.net/" target="_blank">Bulk Operations</a></li>
+							<li><a href="http://dapper-plus.net/" target="_blank">Dapper Plus</a></li>
 						</ul>
-						<p class="pricing-tagline">"Time Is Money" and your customers expect applications to respond as quickly as possible.</p>											
-						<hr class="m-y-md" />
-						<p>Every month, a <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank" onclick="ga('send', 'event', { eventAction: 'download'});">FREE trial</a> of the PRO version is available to let you evaluate all its features without limitations.</p>
-						<hr class="m-y-md" />
 					</div>
 					<div class="col-lg-6">
 						<table class="table table-hover table-bordered">
 							<thead class="thead-inverse">
 								<tr>
-									<th></th>
-									<th>FREE</th>
-									<th>PRO</th>
+									<th style="text-align:left">Entity Framework Plus</th>
+									<th>100% FREE</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<th>Bulk SaveChanges</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Bulk Insert</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Bulk Update</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Bulk Delete</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Bulk Merge</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
 									<th>Audit</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Batch Delete</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Batch Update</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Query Cache</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 							    <tr>
 									<th>Query Deferred</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Query Filter</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Query Future</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Query IncludeFilter</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Query IncludeOptimized</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
 									<th>Commercial License</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 								<tr>
-									<th>Royalty-Free</th>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-									<td><i class="fa fa-check-square-o fa-2x"></i></td>
-								</tr>
-								<tr>
-									<th>Support & Upgrades (1 year)</th>
-									<td><i class="fa fa-times fa-2x"></i></td>
+									<th>Support & Upgrades</th>
 									<td><i class="fa fa-check-square-o fa-2x"></i></td>
 								</tr>
 							</tbody>
-						</table>
-						
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" onsubmit="return purchase_validate()">
-							<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="currency_code" value="USD">
-							<fieldset class="form-group">
-								<input type="hidden" name="on0" value="Seats">
-								<select id="provider_type" name="hosted_button_id" class="form-control" onchange="selectProduct()">
-									<option value="GS977QXB98R2C">SQL Server/ Azure Provider</option>
-									<option value="5WVPWVNDGRHH6">SQL Compact Provider</option>
-									<option value="55WDUT7ENJBKU">SQLite Provider</option>
-									<option value="32JM43GUXW4ZW">MySQL Provider</option>
-									<option value="TSCGQDC4YR2MQ">ALL Providers</option>
-								</select> 
-								<br />
-								<select id="product_option" name="os0" class="form-control">
-									<option id="seat1" value="1 seat">Entity Framework Extensions $599 (1 developer seat)</option>
-									<option id="seat2_4" value="2-4 seats" selected>Entity Framework Extensions $799 (2-4 developer seats)</option>
-									<option id="seat5_9" value="5-9 seats">Entity Framework Extensions $999 (5-9 developer seats)</option>
-									<option id="seat10_14" value="10-14 seats">Entity Framework Extensions $1199 (10-14 developer seats)</option>
-									<option id="seat15_19" value="15-19 seats">Entity Framework Extensions $1399 (15-19 developer seats)</option>
-								</select> 
-							</fieldset>
-							<div class="checkbox">
-								<label>
-									<input id="agree_agreement" type="checkbox">I have read and agree to the <a href="http://www.zzzprojects.com/license-agreement/" target="_blank">License Agreement</a>.
-								</label>
-							</div>
-							<button type="submit" class="btn btn-success btn-lg"><span><i class="fa fa-shopping-cart"></i>&nbsp;<span>BUY NOW</span></span></button>
-							<br /><br />
-							<p>* Contact us (<a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>) for <span class="text-bold-red">Quote</span>, payment method <span class="text-bold-red">alternative</span>, or major <span class="text-bold-red">bundle discount</span> when purchasing more than one product (or you already bought one).</p>
-						</form>					
+						</table>		
 					</div>
 				</div>
 			</div>
@@ -874,34 +669,6 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
 
 	  ga('create', 'UA-55584370-6', 'auto');
 	  ga('send', 'pageview');
-	  
-	  function purchase_validate() {
-		if($("#agree_agreement").prop('checked')) {
-			return true;
-		}
-		
-		$("#error_validation").modal('show')
-		return false;
-	  }
-	  
-	  function selectProduct() {
-		if($("#provider_type").val() == "TSCGQDC4YR2MQ") {
-			$("#seat1").html("Entity Framework Extensions $799 (1 developer seat)");
-			$("#seat2_4").html("Entity Framework Extensions $999 (2-4 developer seats)");
-			$("#seat5_9").html("Entity Framework Extensions $1199 (5-9 developer seats)");
-			$("#seat10_14").html("Entity Framework Extensions $1399 (10-14 developer seats)");
-			$("#seat15_19").html("Entity Framework Extensions $1599 (15-19 developer seats)");
-		}
-		else {
-			$("#seat1").html("Entity Framework Extensions $599 (1 developer seat)");
-			$("#seat2_4").html("Entity Framework Extensions $799 (2-4 developer seats)");
-			$("#seat5_9").html("Entity Framework Extensions $999 (5-9 developer seats)");
-			$("#seat10_14").html("Entity Framework Extensions $1199 (10-14 developer seats)");
-			$("#seat15_19").html("Entity Framework Extensions $1399 (15-19 developer seats)");
-		}
-	  }
-	  
-	  selectProduct();
 	</script>
 	</body>
 </html>
