@@ -225,11 +225,14 @@ layout: post
 		<div id="featured">
 			<div class="container">
 			
-		This library is powered by [Entity Framework Extensions](http://entityframework-extensions.net/?z=github&y=entityframework-plus)
+			<center>
+		This library is powered by <a href="http://entityframework-extensions.net/?z=github&y=entityframework-plus" target="_blank">Entity Framework Extensions</a>
 
 <a href="http://entityframework-extensions.net/?z=github&y=entityframework-plus?z=github&y=entityframework-plus">
 <img src="https://zzzprojects.github.io/images/logo/entityframework-extensions-pub.jpg" alt="Entity Framework Extensions" />
 </a>
+
+</center>
 
 			</div>
 		</div>
