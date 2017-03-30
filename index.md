@@ -224,7 +224,7 @@ layout: post
 		<!-- featured !-->
 		<div id="featured">
 			<div class="container">
-			
+			<br /><br />
 			<center>
 		This library is powered by <a href="http://entityframework-extensions.net/?z=github&y=entityframework-plus" target="_blank">Entity Framework Extensions</a>
 
