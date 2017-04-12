@@ -229,7 +229,7 @@ layout: post
 		This library is powered by <a href="http://entityframework-extensions.net/?z=website&y=entityframework-plus" target="_blank">Entity Framework Extensions</a><br /><br />
 
 <a href="http://entityframework-extensions.net/?z=website&y=entityframework-plus">
-<img src="https://zzzprojects.github.io/images/logo/entityframework-extensions-pub.jpg" alt="Entity Framework Extensions" />
+<img src="https://zzzprojects.github.io/images/logo/entityframework-extensions-pub.jpg" alt="Entity Framework Extensions" style="border: 1px solid #000" />
 </a>
 
 </center>
